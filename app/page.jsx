@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -42,7 +41,7 @@ export default function Home() {
         <p className="mb-2">github repository</p>
       </div>
       <div className="bg-gray-100 p-4 m-4 rounded-lg mb-4">
-        <Link href="http://" className="text-xl text-blue-700 font-bold">
+        <Link href="https://clerk-auth-woad.vercel.app/" className="text-xl text-blue-700 font-bold">
           Web service at vercel.com
         </Link>
         <p className="mb-2">Web service at vercel.com</p>

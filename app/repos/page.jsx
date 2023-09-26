@@ -14,7 +14,7 @@ async function fetchRepos() {
 
 const ReposPage = async () => {
   const repos = await fetchRepos();
-  console.log(repos);
+  // console.log(repos);
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Github repositories of {username}</h2>
