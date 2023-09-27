@@ -46,6 +46,12 @@ export default function Home() {
         </Link>
         <p className="mb-2">Web service at vercel.com</p>
       </div>
+      <div className="bg-gray-100 p-4 m-4 rounded-lg mb-4">
+        <Link href="https://hcjdemo-six.vercel.app/" className="text-xl text-blue-700 font-bold">
+          HCJ Demo Homepage
+        </Link>
+        <p className="mb-2">HTML, CSS, Javascript Demo website</p>
+      </div>
     </>
   );
 }
