@@ -16,8 +16,8 @@ const RepoDirs = async ({ name }) => {
   const dirs = contents.filter((contents) => contents.type === "dir");
   return (
     <div className="mt-4">
-      <h3 className="text-xl text-bold">Directories</h3>
-      <ul>
+      <h3 className="text-xl text-bold dark:text-white">Directories</h3>
+      <ul className="dark:text-gray-300">
         {dirs.map((dir) => (
           <li key={dir.path}>
             <Link href={`https://github.com/${username}/${name}/tree/master/${dir.path}`} className="underline">

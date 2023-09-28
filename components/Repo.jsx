@@ -15,20 +15,20 @@ const Repo = async ({ name }) => {
   const repo = await fetchRepo(name);
   return (
     <div>
-      <h3 className="text-xl font-bold">
+      <h3 className="text-xl font-bold dark:text-white">
         <Link href={repo.html_url}>{repo.name}</Link>
       </h3>
-      <p>{repo.description}</p>
+      <p className="dark:text-gray-300">{repo.description}</p>
       <div className="flex justify-between items-center">
-        <span className="flex items-center gap-1">
+        <span className="flex items-center gap-1 dark:text-gray-300">
           <FaStar />
           {repo.stargazers_count}
         </span>
-        <span className="flex items-center gap-1">
+        <span className="flex items-center gap-1 dark:text-gray-300">
           <FaCodeBranch />
           {repo.forks_count}
         </span>
-        <span className="flex items-center gap-1">
+        <span className="flex items-center gap-1 dark:text-gray-300">
           <FaEye />
           {repo.watchers_count}
         </span>

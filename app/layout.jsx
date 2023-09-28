@@ -13,8 +13,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
+      <html lang="ko" suppressHydrationWarning>
+        <head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              if (localStorage.theme === "dark") {
+                document.documentElement.classList.add("dark")
+              } else {
+                document.documentElement.classList.remove("dark")
+              }
+            `,
+            }}
+          ></script>
+        </head>
+        <body className="dark:bg-slate-900">
           <Header />
           <main className="container">
             <div className="flex items-start justify-center min-h-screen">

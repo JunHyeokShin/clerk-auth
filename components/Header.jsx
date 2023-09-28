@@ -1,12 +1,13 @@
 import { UserButton, auth } from "@clerk/nextjs";
 import Link from "next/link";
+import DarkmodeSwitch from "./DarkmodeSwitch";
 
 const Header = () => {
   const { userId } = auth();
 
   return (
     <>
-      <nav className="bg-red-900 py-4 px-8">
+      <nav className="bg-red-900 py-4 px-8 dark:bg-slate-950">
         <div className="flex items-center justify-between container">
           <div className="flex items-center font-bold">
             <Link href="/">
@@ -37,11 +38,12 @@ const Header = () => {
                 <Link href="/profile" className="text-blue-300 hover:text-white mr-4">
                   Profile
                 </Link>
-                <div className="ml-auto">
+                <div className="mr-4">
                   <UserButton afterSignOutUrl="/" />
                 </div>
               </>
             )}
+            <DarkmodeSwitch className="mr-4" />
           </div>
         </div>
       </nav>
